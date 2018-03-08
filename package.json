@@ -1,11 +1,14 @@
 {
-  "name": "bitcore-wallet-service",
-  "description": "A service for Mutisig HD Bitcoin Wallets",
-  "author": "BitPay Inc",
-  "version": "2.3.0",
+  "name": "bitcore-wallet-service-crown",
+  "version": "0.0.0",
+  "publishConfig": {
+    "tag": "next"
+  },
+  "description": "A service for Mutisig HD Crown Wallets",
+  "author": "Crown Developers <info@crown.tech>",
   "licence": "MIT",
   "keywords": [
-    "bitcoin",
+    "crown",
     "copay",
     "multisig",
     "wallet",
@@ -13,16 +16,15 @@
     "BWS"
   ],
   "repository": {
-    "url": "git@github.com:bitpay/bitcore-wallet-service.git",
+    "url": "git@github.com:Crowndev/bitcore-wallet-service-crown.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/bitpay/bitcore-wallet-service/issues"
+    "url": "https://github.com/Crowndev/bitcore-wallet-service-crown/issues"
   },
   "dependencies": {
     "async": "^0.9.2",
-    "bitcore-lib": "^0.15.0",
-    "bitcore-lib-cash": "^0.16.1",
+    "bitcore-lib": "0.3.1",
     "body-parser": "^1.11.0",
     "compression": "^1.6.2",
     "coveralls": "^2.11.2",
@@ -72,6 +74,10 @@
   },
   "bitcoreNode": "./bitcorenode",
   "contributors": [
+    {
+      "name": "BitPay",
+      "email": "dev@bitpay.com"
+    },
     {
       "name": "Braydon Fuller",
       "email": "braydon@bitpay.com"
