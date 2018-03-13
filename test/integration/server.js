@@ -13,7 +13,7 @@ log.level = 'info';
 var Bitcore = require('bitcore-lib');
 var Bitcore_ = {
   btc: Bitcore,
-  bch: require('bitcore-lib-cash')
+  bch: require('bitcore-lib-crown')
 };
 
 
@@ -2195,7 +2195,7 @@ describe('Wallet service', function() {
           spy.calledOnce.should.equal(true);
           next();
         },
- 
+
       ], function(err) {
         should.not.exist(err);
         done();
@@ -2677,7 +2677,7 @@ describe('Wallet service', function() {
     it('should get balance from insight and store cache', function(done) {
       helpers.stubUtxos(server, wallet, [1, 'u2', 3], function() {
         server.getBalance({
-          twoStep: false 
+          twoStep: false
         }, function(err, balance, cacheUsed) {
           should.not.exist(err);
           should.not.exist(cacheUsed);
@@ -2690,12 +2690,12 @@ describe('Wallet service', function() {
     it('should get balance from cache', function(done) {
       helpers.stubUtxos(server, wallet, [1, 'u2', 3], function() {
         server.getBalance({
-          twoStep: false 
+          twoStep: false
         }, function(err, balance, cacheUsed) {
           should.not.exist(err);
           should.not.exist(cacheUsed);
           server.getBalance({
-            twoStep: false 
+            twoStep: false
           }, function(err, balance, cacheUsed) {
             should.not.exist(err);
             cacheUsed.should.equal(true);
@@ -2710,13 +2710,13 @@ describe('Wallet service', function() {
     it('should not get balance from cache, after X secs, on a direct hit', function(done) {
       helpers.stubUtxos(server, wallet, [1, 'u2', 3], function() {
         server.getBalance({
-          twoStep: false 
+          twoStep: false
         }, function(err, balance, cacheUsed) {
           should.not.exist(err);
           should.not.exist(cacheUsed);
           clock.tick(( Defaults.BALANCE_CACHE_DIRECT_DURATION +1) * 1000);
           server.getBalance({
-            twoStep: false 
+            twoStep: false
           }, function(err, balance, cacheUsed) {
             should.not.exist(err);
             should.not.exist(cacheUsed);
@@ -2731,13 +2731,13 @@ describe('Wallet service', function() {
     it('should not get balance from cache, after X secs, on a twostep hit', function(done) {
       helpers.stubUtxos(server, wallet, [1, 'u2', 3], function() {
         server.getBalance({
-          twoStep: false 
+          twoStep: false
         }, function(err, balance, cacheUsed) {
           should.not.exist(err);
           should.not.exist(cacheUsed);
           clock.tick(( Defaults.BALANCE_CACHE_DIRECT_DURATION - 1) * 1000);
           server.getBalance({
-            twoStep: true 
+            twoStep: true
           }, function(err, balance, cacheUsed) {
             should.not.exist(err);
             should.not.exist(cacheUsed);
@@ -2795,7 +2795,7 @@ describe('Wallet service', function() {
     afterEach(function() {
       clock.restore();
     });
- 
+
 
     it('should get current fee levels', function(done) {
       helpers.stubFeeLevels({
@@ -3087,7 +3087,7 @@ describe('Wallet service', function() {
   };
 
   _.each(['bch', 'btc'], function(coin) {
-  
+
     describe('#createTx ' + coin, function() {
       var addressStr, idKey;
       before(function() {
@@ -3100,7 +3100,7 @@ describe('Wallet service', function() {
       describe('Tx proposal creation & publishing ' + coin, function() {
         var server, wallet;
         beforeEach(function(done) {
-          helpers.createAndJoinWallet(1, 1, { 
+          helpers.createAndJoinWallet(1, 1, {
             coin: coin,
           },  function(s, w) {
             server = s;
@@ -7825,7 +7825,7 @@ describe('Wallet service', function() {
             server.scan({}, function(err) {
               should.not.exist(err);
 
-              // should prederive 3 address, so 
+              // should prederive 3 address, so
               // First call should be m/0/3
               var calls = getAddressActivitySpy.getCalls();
               calls[0].args[0].should.equal(addr);

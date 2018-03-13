@@ -15,7 +15,7 @@ var tingodb = require('tingodb')({
 var Bitcore = require('bitcore-lib');
 var Bitcore_ = {
   btc: Bitcore,
-  bch: require('bitcore-lib-cash')
+  bch: require('bitcore-lib-crown')
 };
 
 var Common = require('../../lib/common');
@@ -391,7 +391,7 @@ helpers.stubAddressActivity = function(activeAddresses, failsOn) {
   stubAddressActivityFailsOn = failsOn;
 
   blockchainExplorer.getAddressActivity = function(address, cb) {
-    if (stubAddressActivityFailsOnCount === stubAddressActivityFailsOn) 
+    if (stubAddressActivityFailsOnCount === stubAddressActivityFailsOn)
       return cb('failed on request');
 
     stubAddressActivityFailsOnCount++;
