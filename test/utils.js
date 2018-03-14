@@ -143,30 +143,5 @@ describe('Utils', function() {
       should.not.exist(Utils.getAddressCoin('1L'));
     });
   });
- 
 
-  describe('#translateAddress', function() {
-    it('should translate address from btc to bch', function() {
-      var res = Utils.translateAddress('1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA', 'bch');
-      res.should.equal('CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz');
-    });
-    it('should translate address from bch to btc', function() {
-      var res = Utils.translateAddress('HBf8isgS8EXG1r3X6GP89FmooUmiJ42wHS', 'btc');
-      res.should.equal('36q2G5FMGvJbPgAVEaiyAsFGmpkhPKwk2r');
-    });
- 
-    it('should keep the address if there is nothing to do (bch)', function() {
-      var res = Utils.translateAddress('CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz', 'bch');
-      res.should.equal('CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz');
-    });
-    it('should keep the address if there is nothing to do (btc)', function() {
-      var res = Utils.translateAddress('1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA', 'btc');
-      should.exist(res);
-      res.should.equal('1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA');
-    });
-
-
-
-  });
-  
 });
