@@ -51,7 +51,7 @@ var config = {
         // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
       },
     },
-    bch: {
+    crw: {
       livenet: {
         provider: 'insight',
         url: 'https://crw-bitcore.crown.tech:443',

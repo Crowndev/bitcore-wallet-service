@@ -136,8 +136,8 @@ describe('Utils', function() {
     it('should identify btc as coin for 1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA', function() {
       Utils.getAddressCoin('1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA').should.equal('btc');
     });
-    it('should identify bch as coin for CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz', function() {
-      Utils.getAddressCoin('CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz').should.equal('bch');
+    it('should identify crw as coin for CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz', function() {
+      Utils.getAddressCoin('CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz').should.equal('crw');
     });
     it('should return null for 1L', function() {
       should.not.exist(Utils.getAddressCoin('1L'));
