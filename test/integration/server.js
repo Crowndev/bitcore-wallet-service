@@ -3078,7 +3078,7 @@ describe('Wallet service', function() {
 
   var addrMap = {
     btc: '18PzpUFkFZE8zKWUPvfykkTxmB9oMR8qP7',
-    crw: 'CPrtPWbp8cCftTQu5fzuLG5zPJNDHMMf8X',
+    crw: '18PzpUFkFZE8zKWUPvfykkTxmB9oMR8qP7',
   }
 
   var idKeyMap = {
