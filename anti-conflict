@@ -10,3 +10,9 @@ let leafEllipticDir = 'node_modules/bitcore-lib-crown/node_modules/elliptic';
 if (fs.existsSync(rootEllipticDir) && !fs.existsSync(leafEllipticDir)) {
   fse.copySync(rootEllipticDir, leafEllipticDir);
 }
+
+let rootBnDir = 'node_modules/bn.js';
+let leafBnDir = 'node_modules/bitcore-lib-crown/node_modules/bn.js';
+if (fs.existsSync(rootBnDir) && !fs.existsSync(leafBnDir)) {
+  fse.copySync(rootBnDir, leafBnDir);
+}
