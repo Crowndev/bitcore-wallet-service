@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+'use strict';
+
+let fs = require('fs');
+let fse = require('fs-extra');
+
+let rootEllipticDir = 'node_modules/elliptic';
+let leafEllipticDir = 'node_modules/bitcore-lib-crown/node_modules/elliptic';
+if (fs.existsSync(rootEllipticDir) && !fs.existsSync(leafEllipticDir)) {
+  fse.copySync(rootEllipticDir, leafEllipticDir);
+}
