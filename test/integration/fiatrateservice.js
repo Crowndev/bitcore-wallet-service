@@ -215,6 +215,25 @@ describe('Fiat rate service', function() {
         code: 'EUR',
         rate: 234.56,
       }];
+      var coinmarketcap = [
+        {
+          "id": "crown",
+          "name": "Crown",
+          "symbol": "CRW",
+          "rank": "243",
+          "price_usd": "1.53369",
+          "price_btc": "0.00017804",
+          "24h_volume_usd": "75579.3",
+          "market_cap_usd": "27096318.0",
+          "available_supply": "17667402.0",
+          "total_supply": "17667402.0",
+          "max_supply": "42000000.0",
+          "percent_change_1h": "-1.07",
+          "percent_change_24h": "-7.44",
+          "percent_change_7d": "-2.69",
+          "last_updated": "1521740045"
+        }
+      ];
       var bitstamp = {
         last: 120.00,
       };
@@ -222,6 +241,10 @@ describe('Fiat rate service', function() {
         url: 'https://bitpay.com/api/rates/',
         json: true
       }).yields(null, null, bitpay);
+      request.get.withArgs({
+        url: 'https://api.coinmarketcap.com/v1/ticker/crown/',
+        json: true
+      }).yields(null, null, coinmarketcap);
       request.get.withArgs({
         url: 'https://www.bitstamp.net/api/ticker/',
         json: true
