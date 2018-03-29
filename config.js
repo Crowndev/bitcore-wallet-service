@@ -40,15 +40,17 @@ var config = {
   blockchainExplorerOpts: {
     livenet: {
       provider: 'insight',
-      url: 'https://insight.bitpay.com:443',
+      url: 'https://crw-bitcore.crown.tech:443',
     },
+    /* TODO: Need to set up a testnet server?
     testnet: {
       provider: 'insight',
-      url: 'https://test-insight.bitpay.com:443',
+      url: 'https://test-crw-bitcore.crown.tech:443',
       // url: 'http://localhost:3001',
       // Multiple servers (in priority order)
-      // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
+      // url: ['http://a.b.c', 'https://test-crw-bitcore.crown.tech:443'],
     },
+    */
   },
   pushNotificationsOpts: {
     templatePath: './lib/templates',
@@ -59,7 +61,7 @@ var config = {
     authorizationKey: '',
   },
   fiatRateServiceOpts: {
-    defaultProvider: 'BitPay',
+    defaultProvider: 'BitPayPlus',
     fetchInterval: 60, // in minutes
   },
   // To use email notifications uncomment this:
