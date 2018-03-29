@@ -8470,7 +8470,7 @@ describe('Wallet service', function() {
           address.walletId.should.equal(wallet.crw.id);
           address.coin.should.equal('crw');
           address.network.should.equal('livenet');
-          address.address.should.equal('CbWsiNjh18ynQYc5jfYhhespEGrAaW8YUq');
+          address.address.should.equal('1L3z9LPd861FWQhf3vDn89Fnc9dkdBo2CG');
           server.btc.getMainAddresses({}, function(err, addresses) {
             should.not.exist(err);
             addresses.length.should.equal(1);
@@ -8482,7 +8482,7 @@ describe('Wallet service', function() {
               addresses.length.should.equal(1);
               addresses[0].coin.should.equal('crw');
               addresses[0].walletId.should.equal(wallet.crw.id);
-              addresses[0].address.should.equal('CbWsiNjh18ynQYc5jfYhhespEGrAaW8YUq');
+              addresses[0].address.should.equal('1L3z9LPd861FWQhf3vDn89Fnc9dkdBo2CG');
               done();
             });
           });

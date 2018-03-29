@@ -5,7 +5,10 @@ var keyPair = {
 
 var copayers = [{
   id44btc: '626452e5e0e35df4d9ae4d3e60653c9ae9a814f00c84dc40f5887069b18e2110',
-  id44crw: '671fee02a6c1c4de2e2609f9f9a6180dc03acfff6b759fe0b13a616ed4880065',
+
+  // The algorithm is SHA256("crw" + xPubKey_44H_0H_0H)
+  id44crw: '5c7e81c6f93a243e832ca081bb0b78869117bb16e0c1b0da52774e1c372b64eb',
+
   id45: 'e7467366d5754be2b7d386c9737ab87214c26314bdc3489702e09c719be1bdb7',
   xPrivKey: 'xprv9s21ZrQH143K2n4rV4AtAJFptEmd1tNMKCcSyQBCSuN5eq1dCUhcv6KQJS49joRxu8NNdFxy8yuwTtzCPNYUZvVGC7EPRm2st2cvE7oyTbB',
   xPubKey: 'xpub661MyMwAqRbcFG9Kb5htXSCZSGc7RM6CgRY3mnap1Eu4XdLmk21sTtdt9iWAiL64KazU3QWrYEYSRAKgLvkMRe8JMxffDvt4AhCDzyMsnsT',
