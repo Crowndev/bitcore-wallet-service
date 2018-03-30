@@ -139,7 +139,7 @@ var aTXP = function(type) {
     "changeAddress": {
       "version": '1.0.0',
       "createdOn": 1424372337,
-      "address": '3CauZ5JUFfmSAx2yANvCRoNXccZ3YSUjXH',
+      "address": 'CTMnCaA6apRayvExj2aXagdd6DUjuLE87b',
       "path": 'm/2147483647/1/0',
       "publicKeys": ['030562cb099e6043dc499eb359dd97c9d500a3586498e4bcf0228a178cc20e6f16',
         '0367027d17dbdfc27b5e31f8ed70e14d47949f0fa392261e977db0851c8b0d6fac',
@@ -151,7 +151,7 @@ var aTXP = function(type) {
       "vout": 8,
       "satoshis": 100000000,
       "scriptPubKey": "a914a8a9648754fbda1b6c208ac9d4e252075447f36887",
-      "address": "3H4pNP6J4PW4NnvdrTg37VvZ7h2QWuAwtA",
+      "address": "CXqh1swvPYADBm8dR7LNGPBebHx6w3a8f7",
       "path": "m/2147483647/0/1",
       "publicKeys": ["0319008ffe1b3e208f5ebed8f46495c056763f87b07930a7027a92ee477fb0cb0f", "03b5f035af8be40d0db5abb306b7754949ab39032cf99ad177691753b37d101301"]
     }],
