@@ -42,7 +42,7 @@ describe('Address', function() {
       }], 'm/0/0', 1, 'livenet', false);
       should.exist(address);
       address.walletId.should.equal('wallet-id');
-      address.address.should.equal('3QN2CiSxcUsFuRxZJwXMNDQ2esnr5RXTvw');
+      address.address.should.equal('Cf8trDJawdXQiQAYsbBgX6f88UiYWfPSCQ');
       address.network.should.equal('livenet');
       address.isChange.should.be.false;
       address.path.should.equal('m/0/0');
@@ -55,7 +55,7 @@ describe('Address', function() {
       }], 'm/0/0', 1, 'livenet', false);
       should.exist(address);
       address.walletId.should.equal('wallet-id');
-      address.address.should.equal('3BY4K8dfsHryhWh2MJ6XHxxsRfcvPAyseH');
+      address.address.should.equal('CSJvxdVJCSX8WUu1uwkrSrDxuGYcfDLwtK');
       address.network.should.equal('livenet');
       address.isChange.should.be.false;
       address.path.should.equal('m/0/0');

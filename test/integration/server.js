@@ -1139,7 +1139,7 @@ describe('Wallet service', function() {
           should.exist(address);
           address.walletId.should.equal(wallet.id);
           address.network.should.equal('livenet');
-          address.address.should.equal('3BVJZ4CYzeTtawDtgwHvWV5jbvnXtYe97i');
+          address.address.should.equal('CSGBCZ4BKo83PuRtFaxFfNLq5XiEBNZgxg');
           address.isChange.should.be.false;
           address.path.should.equal('m/2147483647/0/0');
           address.type.should.equal('P2SH');

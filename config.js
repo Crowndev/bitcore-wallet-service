@@ -42,7 +42,6 @@ var config = {
       provider: 'insight',
       url: 'https://crw-bitcore.crown.tech:443',
     },
-    /* TODO: Need to set up a testnet server?
     testnet: {
       provider: 'insight',
       url: 'https://test-crw-bitcore.crown.tech:443',
@@ -50,7 +49,6 @@ var config = {
       // Multiple servers (in priority order)
       // url: ['http://a.b.c', 'https://test-crw-bitcore.crown.tech:443'],
     },
-    */
   },
   pushNotificationsOpts: {
     templatePath: './lib/templates',
