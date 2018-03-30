@@ -6,7 +6,7 @@
   },
   "description": "A service for Mutisig HD Crown Wallets",
   "author": "Crown Developers <info@crown.tech>",
-  "licence": "MIT",
+  "license": "MIT",
   "keywords": [
     "crown",
     "copay",
