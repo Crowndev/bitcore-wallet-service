@@ -7045,9 +7045,9 @@ describe('Wallet service', function() {
 
       it('should scan main addresses', function(done) {
         helpers.stubAddressActivity(
-          ['39AA1Y2VvPJhV3RFbc7cKbUax1WgkPwweR', // m/2147483647/0/0
-            '3QX2MNSijnhCALBmUVnDo5UGPj3SEGASWx', // m/2147483647/0/2
-            '3MzGaz4KKX66w8ShKaR536ZqzVvREBqqYu', // m/2147483647/1/0
+          ['CPw2f2t8FXxrJ1dFAFmwUUjgRcSP4ibLQq', // m/2147483647/0/0
+            'CfHtzsJM4wMLyJPm39SYwxjMsKy8Vy1y8u', // m/2147483647/0/2
+            'Ccm9EUuwefkFk6egtE5QBypwU6r7Yysh9F', // m/2147483647/1/0
           ]);
         var expectedPaths = [
           'm/2147483647/0/0',
@@ -7076,11 +7076,11 @@ describe('Wallet service', function() {
       });
       it('should scan main addresses & copayer addresses', function(done) {
         helpers.stubAddressActivity(
-          ['39AA1Y2VvPJhV3RFbc7cKbUax1WgkPwweR', // m/2147483647/0/0
-            '3MzGaz4KKX66w8ShKaR536ZqzVvREBqqYu', // m/2147483647/1/0
-            '3BYoynejwBH9q4Jhr9m9P5YTnLTu57US6g', // m/0/0/1
-            '37Pb8c32hzm16tCZaVHj4Dtjva45L2a3A3', // m/1/1/0
-            '32TB2n283YsXdseMqUm9zHSRcfS5JxTWxx', // m/1/0/0
+          ['CPw2f2t8FXxrJ1dFAFmwUUjgRcSP4ibLQq', // m/2147483647/0/0
+            'Ccm9EUuwefkFk6egtE5QBypwU6r7Yysh9F', // m/2147483647/1/0
+            'CSKgdHWNGKwJe2WhQoRUXxoZFwPbTMKb6w', // m/0/0/1
+            'CNATn6tf39R9urQZ98x4D79qQAymmu4WaA', // m/1/1/0
+            'CHE3gGskNhXgSqrMQ8RV9AhX6GMmh2CinV', // m/1/0/0
           ]);
         var expectedPaths = [
           'm/2147483647/0/0',
