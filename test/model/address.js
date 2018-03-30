@@ -11,7 +11,7 @@ describe('Address', function() {
   describe('#create', function() {
     it('should create livenet address', function() {
       var x = Address.create({
-        address: '3KxttbKQQPWmpsnXZ3rB4mgJTuLnVR7frg',
+        address: 'CajmY6B2jYAvdqzX7hWWDewPwWGUs4t54H',
         walletId: '123',
         isChange: false,
         path: 'm/0/1',
