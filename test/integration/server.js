@@ -7177,7 +7177,7 @@ describe('Wallet service', function() {
       });
     });
     it('should start multiple asynchronous scans for different wallets', function(done) {
-      helpers.stubAddressActivity(['3K2VWMXheGZ4qG35DyGjA2dLeKfaSr534A']);
+      helpers.stubAddressActivity(['CZoN9rPKyRDDeEF4ncw4JutS7vbGmouB8b']);
       Defaults.SCAN_ADDRESS_GAP = 1;
 
       var scans = 0;
