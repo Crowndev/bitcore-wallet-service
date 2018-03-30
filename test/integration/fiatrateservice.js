@@ -39,7 +39,7 @@ describe('Fiat rate service', function() {
   });
   describe('#getRate', function() {
     it('should get current rate', function(done) {
-      service.storage.storeFiatRate('BitPay', [{
+      service.storage.storeFiatRate('BitPayPlus', [{
         code: 'USD',
         value: 123.45,
       }], function(err) {
@@ -54,12 +54,12 @@ describe('Fiat rate service', function() {
       });
     });
     it('should get current rate for different currency', function(done) {
-      service.storage.storeFiatRate('BitPay', [{
+      service.storage.storeFiatRate('BitPayPlus', [{
         code: 'USD',
         value: 123.45,
       }], function(err) {
         should.not.exist(err);
-        service.storage.storeFiatRate('BitPay', [{
+        service.storage.storeFiatRate('BitPayPlus', [{
           code: 'EUR',
           value: 345.67,
         }], function(err) {
@@ -76,7 +76,7 @@ describe('Fiat rate service', function() {
     });
 
     it('should get current rate for different provider', function(done) {
-      service.storage.storeFiatRate('BitPay', [{
+      service.storage.storeFiatRate('BitPayPlus', [{
         code: 'USD',
         value: 100.00,
       }], function(err) {
@@ -107,13 +107,13 @@ describe('Fiat rate service', function() {
     it('should get rate for specific ts', function(done) {
       var clock = sinon.useFakeTimers(0, 'Date');
       clock.tick(20);
-      service.storage.storeFiatRate('BitPay', [{
+      service.storage.storeFiatRate('BitPayPlus', [{
         code: 'USD',
         value: 123.45,
       }], function(err) {
         should.not.exist(err);
         clock.tick(100);
-        service.storage.storeFiatRate('BitPay', [{
+        service.storage.storeFiatRate('BitPayPlus', [{
           code: 'USD',
           value: 345.67,
         }], function(err) {
@@ -137,7 +137,7 @@ describe('Fiat rate service', function() {
       var clock = sinon.useFakeTimers(0, 'Date');
       async.each([1.00, 2.00, 3.00, 4.00], function(value, next) {
         clock.tick(100);
-        service.storage.storeFiatRate('BitPay', [{
+        service.storage.storeFiatRate('BitPayPlus', [{
           code: 'USD',
           value: value,
         }, {
@@ -177,7 +177,7 @@ describe('Fiat rate service', function() {
 
     it('should not get rate older than 2hs', function(done) {
       var clock = sinon.useFakeTimers(0, 'Date');
-      service.storage.storeFiatRate('BitPay', [{
+      service.storage.storeFiatRate('BitPayPlus', [{
         code: 'USD',
         value: 123.45,
       }], function(err) {
@@ -215,6 +215,25 @@ describe('Fiat rate service', function() {
         code: 'EUR',
         rate: 234.56,
       }];
+      var coinmarketcap = [
+        {
+          "id": "crown",
+          "name": "Crown",
+          "symbol": "CRW",
+          "rank": "243",
+          "price_usd": "1.53369",
+          "price_btc": "0.00017804",
+          "24h_volume_usd": "75579.3",
+          "market_cap_usd": "27096318.0",
+          "available_supply": "17667402.0",
+          "total_supply": "17667402.0",
+          "max_supply": "42000000.0",
+          "percent_change_1h": "-1.07",
+          "percent_change_24h": "-7.44",
+          "percent_change_7d": "-2.69",
+          "last_updated": "1521740045"
+        }
+      ];
       var bitstamp = {
         last: 120.00,
       };
@@ -222,6 +241,10 @@ describe('Fiat rate service', function() {
         url: 'https://bitpay.com/api/rates/',
         json: true
       }).yields(null, null, bitpay);
+      request.get.withArgs({
+        url: 'https://api.coinmarketcap.com/v1/ticker/crown/',
+        json: true
+      }).yields(null, null, coinmarketcap);
       request.get.withArgs({
         url: 'https://www.bitstamp.net/api/ticker/',
         json: true
