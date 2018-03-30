@@ -7126,9 +7126,9 @@ describe('Wallet service', function() {
 
     it('should start an asynchronous scan', function(done) {
       helpers.stubAddressActivity(
-        ['3GvvHimEMk2GBZnPxTF89GHZL6QhZjUZVs', // m/2147483647/0/0
-          '37pd1jjTUiGBh8JL2hKLDgsyrhBoiz5vsi', // m/2147483647/0/2
-          '3C3tBn8Sr1wHTp2brMgYsj9ncB7R7paYuB', // m/2147483647/1/0
+        ['CXhnwDcrgtgQzXzPX6uTJ9YeohLPyCPJab', // m/2147483647/0/0
+          'CNbVfEb5orvLW6WKbLyfNa95LJ7VydsSTt', // m/2147483647/0/2
+          'CSpkqGz5BAbSGnEbR1Lt2cQt5n37SNP7Rn', // m/2147483647/1/0
         ]);
       var expectedPaths = [
         'm/2147483647/0/0',
