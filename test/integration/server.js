@@ -51,9 +51,9 @@ describe('Wallet service', function() {
   describe('#getInstance', function() {
     it('should get server instance', function() {
       var server = WalletService.getInstance({
-        clientVersion: 'bwc-2.9.0',
+        clientVersion: 'bwc-0.3.9',
       });
-      server.clientVersion.should.equal('bwc-2.9.0');
+      server.clientVersion.should.equal('bwc-0.3.9');
     });
     it('should not get server instance for BWC lower than v0.1', function() {
       var err;
