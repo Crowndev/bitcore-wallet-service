@@ -55,11 +55,11 @@ describe('Wallet service', function() {
       });
       server.clientVersion.should.equal('bwc-2.9.0');
     });
-    it('should not get server instance for BWC lower than v1.2', function() {
+    it('should not get server instance for BWC lower than v0.1', function() {
       var err;
       try {
         var server = WalletService.getInstance({
-          clientVersion: 'bwc-1.1.99',
+          clientVersion: 'bwc-0.0.99',
         });
       } catch (ex) {
         err = ex;
@@ -78,12 +78,12 @@ describe('Wallet service', function() {
   });
 
   describe('#getInstanceWithAuth', function() {
-    it('should not get server instance for BWC lower than v1.2', function(done) {
+    it('should not get server instance for BWC lower than v0.1', function(done) {
       var server = WalletService.getInstanceWithAuth({
         copayerId: '1234',
         message: 'hello world',
         signature: 'xxx',
-        clientVersion: 'bwc-1.1.99',
+        clientVersion: 'bwc-0.0.99',
       }, function(err, server) {
         should.exist(err);
         should.not.exist(server);
